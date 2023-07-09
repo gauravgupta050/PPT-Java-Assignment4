@@ -1,0 +1,109 @@
+Q1: Write a program to show Interface Example in java?
+Ans:-
+interface Drawable{  
+void draw();  
+}  
+//Implementation: by second user  
+class Rectangle implements Drawable{  
+public void draw(){System.out.println("drawing rectangle");}  
+}  
+class Circle implements Drawable{  
+public void draw(){System.out.println("drawing circle");}  
+}  
+//Using interface: by third user  
+class TestInterface1{  
+public static void main(String args[]){  
+Drawable d=new Circle();//In real scenario, object is provided by method e.g. getDrawable()  
+d.draw();  
+}}  
+
+Q2: Write a program a Program with 2 concrete method and 2 abstract method in java ?
+Ans:-
+// Abstract class example  
+abstract class AbstractExample {  
+   
+    // Abstract method  
+    abstract void display();  
+   
+    // Concrete method  
+    void show()  
+    {  
+        System.out.println("Concrete method of abstract class");  
+    }  
+}  
+   
+// Subclass of abstract class  
+class SubClass extends AbstractExample {  
+   
+    // Implementing the abstract method  
+    void display()  
+    {  
+        System.out.println("Abstract method implemented");  
+    }  
+}  
+   
+/** 
+ * Main class 
+ */  
+public class AbstractClass{  
+   
+    public static void main(String args[])  
+    {  
+        // Creating an object of the subclass  
+        SubClass obj = new SubClass();  
+   
+        // Calling the abstract method  
+        obj.display();  
+   
+        // Calling the concrete method  
+        obj.show();  
+    }  
+}  
+
+Q3: Write a program  to show the use of functional interface in java?
+Ans:-
+// Java program to demonstrate functional interface
+
+class Test {
+	public static void main(String args[])
+	{
+		// create anonymous inner class object
+		new Thread(new Runnable() {
+			@Override public void run()
+			{
+				System.out.println("New thread created");
+			}
+		}).start();
+	}
+}
+
+Q4: What is an interface in Java?
+Ans:-An interface in Java is a blueprint of a class. It has static constants and abstract methods.The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+
+Java Interface also represents the IS-A relationship.It cannot be instantiated just like the abstract class.
+
+Q5: What is the use of interface in Java?
+Ans:-Interfaces are used in Java to achieve abstraction. By using the implements keyword, a java class can implement an interface. In general terms, an interface can be defined as a container that stores the signatures of the methods to be implemented in the code segment. It improves the levels of Abstraction.
+
+Q6: What is the lambda expression of Java 8?
+Ans:-Lambda Expressions were added in Java 8. A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+
+Q7: Can you pass lambda expressions to a method? When?
+ANS:-A lambda expression passed in a method that has an argument of type of functional interface. If need to pass a lambda expression as an argument, the type of parameter receiving the lambda expression argument must be of a functional interface type.
+
+Q8: What is the functional interface in Java 8?
+Ans:-A functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit. From Java 8 onwards, lambda expressions can be used to represent the instance of a functional interface. A functional interface can have any number of default methods.
+
+Q9: What is the benefit of lambda expressions in Java 8?
+Ans:-The benefits of lambda in Java
+Lambda expressions improve code readability and do not require interpretation. 
+Lambdas allow you to write concise code. 
+It encourages the use of functional programming. 
+It simplifies variable scope and encourages code reusability.
+Lambdas allow you to use parallel processing.
+
+Q10: Is it mandatory for a lambda expression to have parameters?
+Ans:-Type inference in lambda expressions
+The lambda must contain the same number of parameters as the delegate type. 
+Each input parameter in the lambda must be implicitly convertible to its corresponding delegate parameter.
+The return value of the lambda (if any) must be implicitly convertible to the delegate's return type.
